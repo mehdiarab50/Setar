@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پلتفرم آموزش سه‌تار | Setar Mentor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Setar Mentor — پلتفرم آموزش کامل سه‌تار</h1>
+      <p>
+        از آشنایی با ساز تا تمرین نت با تشخیص صدای زنده نوازنده؛ با راهنمایی آنی برای درست
+        نواختن.
+      </p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>نقشه مسیر آموزشی</h2>
+        <div class="grid lessons" id="lessonGrid"></div>
+      </section>
+
+      <section class="card">
+        <h2>تمرین نت با شنیدن صدای مرجع</h2>
+        <div class="practice-controls">
+          <label for="noteSelect">نت هدف:</label>
+          <select id="noteSelect"></select>
+          <button id="playReferenceBtn">پخش صدای مرجع</button>
+        </div>
+        <p class="hint">
+          ابتدا صدای مرجع را گوش دهید، سپس با سه‌تار همان نت را اجرا کنید تا سیستم دقت شما را
+          بررسی کند.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>تحلیل صدای نوازنده (Realtime)</h2>
+        <div class="practice-controls">
+          <button id="startMicBtn">شروع شنود میکروفون</button>
+          <button id="stopMicBtn" disabled>توقف</button>
+        </div>
+
+        <div class="feedback-grid">
+          <div>
+            <h3>نت تشخیص‌داده‌شده</h3>
+            <p id="detectedNote" class="value">—</p>
+          </div>
+          <div>
+            <h3>فرکانس</h3>
+            <p id="detectedFreq" class="value">—</p>
+          </div>
+          <div>
+            <h3>اختلاف با نت هدف</h3>
+            <p id="detectedCents" class="value">—</p>
+          </div>
+          <div>
+            <h3>وضعیت کوک اجرا</h3>
+            <p id="playStatus" class="value">در انتظار</p>
+          </div>
+        </div>
+
+        <div class="meter" aria-label="pitch meter">
+          <span id="meterNeedle"></span>
+        </div>
+        <p id="coachMessage" class="coach-message">
+          میکروفون را فعال کنید و نت انتخاب‌شده را روی سه‌تار اجرا کنید.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>جلسه تمرین پیشنهادی روزانه (۳۰ دقیقه)</h2>
+        <ol class="schedule">
+          <li>۵ دقیقه: گرم‌کردن دست راست و چپ با الگوهای ساده مضراب.</li>
+          <li>۱۰ دقیقه: تمرین نت‌خوانی با نت‌های انتخابی و گوش‌دادن به صدای مرجع.</li>
+          <li>۱۰ دقیقه: اجرای گوشه‌های ساده (مثل درآمد شور) با مترونوم آهسته.</li>
+          <li>۵ دقیقه: ضبط اجرای خود و مرور خطاهای کوک و ریتم.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>ساخته‌شده برای آموزش تعاملی سه‌تار — نسخه اولیه</p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
